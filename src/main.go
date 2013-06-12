@@ -6,6 +6,7 @@ package main
 //
 import "C"
 import "fmt"
+import "os"
 
 func main() {
 	go func() {
@@ -13,6 +14,9 @@ func main() {
 		fmt.Println("Can you see this message?")
 	}()
 
-	args := []*C.char{C.CString("foo")}
-	C.GoTest_AppMain(C.int(len(args)), &args[0])
+	cargs := []*C.char{}
+	for _, arg := range os.Args {
+		cargs = append(cargs, C.CString(arg))
+	}
+	C.GoTest_AppMain(C.int(len(cargs)), &cargs[0])
 }
