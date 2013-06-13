@@ -24,11 +24,7 @@ var sender = make(chan string)
 
 //export GoTest_ReceiveMessageFromUI
 func GoTest_ReceiveMessageFromUI(message C.cstring) {
-	receiveMessageFromUI(C.GoString(message))
-}
-
-func receiveMessageFromUI(message string) {
-	receiver<- message
+	receiver<- C.GoString(message)
 }
 
 func MessageReceiver() <-chan string {
@@ -50,7 +46,7 @@ func MainLoop() {
 		for _, carg := range cargs {
 			C.free(unsafe.Pointer(carg))
 		}
-		cargs = cargs[0:0]
+		cargs = nil
 	}()
 
 	go func() {
