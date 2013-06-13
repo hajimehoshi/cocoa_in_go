@@ -16,7 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EF8F908A17678279008B4289 /* main.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.go; sourceTree = "<group>"; };
 		EFD39A0A176769C50081A91D /* GoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD39A0D176769C50081A91D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EFD39A10176769C50081A91D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -44,14 +43,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EF8F908917678279008B4289 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				EF8F908A17678279008B4289 /* main.go */,
-			);
-			path = src;
-			sourceTree = SOURCE_ROOT;
-		};
 		EFD39A01176769C40081A91D = {
 			isa = PBXGroup;
 			children = (
@@ -91,7 +82,6 @@
 		EFD39A13176769C50081A91D /* GoTest */ = {
 			isa = PBXGroup;
 			children = (
-				EF8F908917678279008B4289 /* src */,
 				EFD39A1F176769C50081A91D /* AppDelegate.h */,
 				EFD39A20176769C50081A91D /* AppDelegate.m */,
 				EFD39A22176769C50081A91D /* MainMenu.xib */,
