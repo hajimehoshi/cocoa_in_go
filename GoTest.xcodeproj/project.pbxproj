@@ -10,7 +10,6 @@
 		8C9B577D176990750062F63D /* AppMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9B577C176990750062F63D /* AppMain.m */; };
 		EFD39A0E176769C50081A91D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD39A0D176769C50081A91D /* Cocoa.framework */; };
 		EFD39A18176769C50081A91D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFD39A16176769C50081A91D /* InfoPlist.strings */; };
-		EFD39A1A176769C50081A91D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD39A19176769C50081A91D /* main.m */; };
 		EFD39A1E176769C50081A91D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = EFD39A1C176769C50081A91D /* Credits.rtf */; };
 		EFD39A21176769C50081A91D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD39A20176769C50081A91D /* AppDelegate.m */; };
 		EFD39A24176769C50081A91D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFD39A22176769C50081A91D /* MainMenu.xib */; };
@@ -26,7 +25,6 @@
 		EFD39A12176769C50081A91D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EFD39A15176769C50081A91D /* GoTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoTest-Info.plist"; sourceTree = "<group>"; };
 		EFD39A17176769C50081A91D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		EFD39A19176769C50081A91D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EFD39A1B176769C50081A91D /* GoTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoTest-Prefix.pch"; sourceTree = "<group>"; };
 		EFD39A1D176769C50081A91D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		EFD39A1F176769C50081A91D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 			children = (
 				EFD39A15176769C50081A91D /* GoTest-Info.plist */,
 				EFD39A16176769C50081A91D /* InfoPlist.strings */,
-				EFD39A19176769C50081A91D /* main.m */,
 				EFD39A1B176769C50081A91D /* GoTest-Prefix.pch */,
 				EFD39A1C176769C50081A91D /* Credits.rtf */,
 				8C9B577B17698FCD0062F63D /* AppMain.h */,
@@ -189,7 +186,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFD39A1A176769C50081A91D /* main.m in Sources */,
 				EFD39A21176769C50081A91D /* AppDelegate.m in Sources */,
 				8C9B577D176990750062F63D /* AppMain.m in Sources */,
 			);
