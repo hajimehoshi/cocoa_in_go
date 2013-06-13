@@ -13,14 +13,23 @@ package ui
 //
 import "C"
 import (
-	"fmt"
 	"os"
 	"unsafe"
 )
 
+var receiver = make(chan string)
+
 //export GoTest_ReceiveMessageFromUI
 func GoTest_ReceiveMessageFromUI(message *C.char) {
-	fmt.Printf("Message from UI: %s\n", C.GoString(message))
+	receiveMessageFromUI(C.GoString(message))
+}
+
+func receiveMessageFromUI(message string) {
+	receiver<- message
+}
+
+func MessageReceiver() <-chan string {
+	return receiver
 }
 
 func MainLoop() {
