@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AppMain.h"
 
 @implementation AppDelegate
 
@@ -14,5 +15,7 @@
 {
     // Insert code here to initialize your application
 }
-
+- (IBAction)pushButton:(id)sender {
+    GoTest_SendMessageToGo("Hello, World!");
+}
 @end

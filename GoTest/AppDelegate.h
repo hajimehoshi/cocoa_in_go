@@ -11,5 +11,6 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+- (IBAction)pushButton:(id)sender;
 
 @end

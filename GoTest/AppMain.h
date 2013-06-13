@@ -11,4 +11,10 @@
 
 int GoTest_AppMain(int argc, const char** argv);
 
+typedef void(*GoTest_SendMessageToGoFunc)(char* message);
+
+void GoTest_SendMessageToGo(char* message);
+
+extern GoTest_SendMessageToGoFunc GoTest_SendMessageToGo_;
+
 #endif
