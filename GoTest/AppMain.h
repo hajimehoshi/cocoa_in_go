@@ -9,6 +9,6 @@
 #ifndef GoTest_AppMain_h
 #define GoTest_AppMain_h
 
-
+int GoTest_AppMain(int argc, const char** argv);
 
 #endif

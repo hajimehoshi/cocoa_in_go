@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C9B577D176990750062F63D /* AppMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9B577C176990750062F63D /* AppMain.m */; };
 		EFD39A0E176769C50081A91D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD39A0D176769C50081A91D /* Cocoa.framework */; };
 		EFD39A18176769C50081A91D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFD39A16176769C50081A91D /* InfoPlist.strings */; };
 		EFD39A1A176769C50081A91D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD39A19176769C50081A91D /* main.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C9B577B17698FCD0062F63D /* AppMain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppMain.h; sourceTree = "<group>"; };
+		8C9B577C176990750062F63D /* AppMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppMain.m; sourceTree = "<group>"; };
 		EFD39A0A176769C50081A91D /* GoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD39A0D176769C50081A91D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EFD39A10176769C50081A91D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -98,6 +101,8 @@
 				EFD39A19176769C50081A91D /* main.m */,
 				EFD39A1B176769C50081A91D /* GoTest-Prefix.pch */,
 				EFD39A1C176769C50081A91D /* Credits.rtf */,
+				8C9B577B17698FCD0062F63D /* AppMain.h */,
+				8C9B577C176990750062F63D /* AppMain.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 			files = (
 				EFD39A1A176769C50081A91D /* main.m in Sources */,
 				EFD39A21176769C50081A91D /* AppDelegate.m in Sources */,
+				8C9B577D176990750062F63D /* AppMain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
