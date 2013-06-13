@@ -5,7 +5,7 @@ package ui
 // #include <stdlib.h>
 // #include "../../GoTest/AppMain.h"
 //
-// extern void GoTest_ReceiveMessageFromUI(char* message);
+// void GoTest_ReceiveMessageFromUI(char* message);
 //
 // static void setReceiver() {
 //   GoTest_SetSendMessageToGoFunc(GoTest_ReceiveMessageFromUI);
