@@ -5,7 +5,9 @@ package ui
 // #include <stdlib.h>
 // #include "../../GoTest/AppMain.h"
 //
-// void GoTest_ReceiveMessageFromUI(char* message);
+// typedef const char* cstring;
+//
+// void GoTest_ReceiveMessageFromUI(const char* message);
 //
 // static void setReceiver() {
 //   GoTest_SetSendMessageToGoFunc(GoTest_ReceiveMessageFromUI);
@@ -18,9 +20,10 @@ import (
 )
 
 var receiver = make(chan string)
+var sender = make(chan string)
 
 //export GoTest_ReceiveMessageFromUI
-func GoTest_ReceiveMessageFromUI(message *C.char) {
+func GoTest_ReceiveMessageFromUI(message C.cstring) {
 	receiveMessageFromUI(C.GoString(message))
 }
 
@@ -30,6 +33,10 @@ func receiveMessageFromUI(message string) {
 
 func MessageReceiver() <-chan string {
 	return receiver
+}
+
+func MessageSender() chan<- string {
+	return sender
 }
 
 func MainLoop() {
@@ -44,6 +51,15 @@ func MainLoop() {
 			C.free(unsafe.Pointer(carg))
 		}
 		cargs = cargs[0:0]
+	}()
+
+	go func() {
+		for message := range sender {
+			cmessage := C.CString(message)
+			defer C.free(unsafe.Pointer(cmessage))
+
+			C.GoTest_SendMessageToUI(cmessage)
+		}
 	}()
 
 	C.GoTest_AppMain(C.int(len(cargs)), &cargs[0])

@@ -10,7 +10,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-static GoTest_SendMessageToGoFunc GoTest_SendMessageToGo_;
+static GoTest_SendMessageToGoFunc sendMessageToGo_;
 
 int GoTest_AppMain(int argc, const char** argv)
 {
@@ -19,10 +19,16 @@ int GoTest_AppMain(int argc, const char** argv)
 
 void GoTest_SetSendMessageToGoFunc(GoTest_SendMessageToGoFunc func)
 {
-    GoTest_SendMessageToGo_ = func;
+    sendMessageToGo_ = func;
 }
 
-void GoTest_SendMessageToGo(char* message)
+void GoTest_SendMessageToGo(const char* message)
 {
-    GoTest_SendMessageToGo_(message);
+    sendMessageToGo_(message);
+}
+
+void GoTest_SendMessageToUI(const char* message)
+{
+    // TODO: Use performeSelectorOnMainThread
+    NSLog(@"%s", message);
 }
