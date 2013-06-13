@@ -6,8 +6,8 @@ package ui
 //
 // extern void GoTest_ReceiveMessageFromUI(char* message);
 //
-// static void GoTest_Initialize() {
-//   GoTest_SendMessageToGo_ = GoTest_ReceiveMessageFromUI;
+// static void setReceiver() {
+//   GoTest_SetSendMessageToGoFunc(GoTest_ReceiveMessageFromUI);
 // }
 //
 import "C"
@@ -22,7 +22,7 @@ func GoTest_ReceiveMessageFromUI(message *C.char) {
 }
 
 func MainLoop() {
-	C.GoTest_Initialize()
+	C.setReceiver()
 	cargs := []*C.char{}
 	for _, arg := range os.Args {
 		cargs = append(cargs, C.CString(arg))

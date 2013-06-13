@@ -10,11 +10,16 @@
 
 #import <Cocoa/Cocoa.h>
 
-GoTest_SendMessageToGoFunc GoTest_SendMessageToGo_;
+static GoTest_SendMessageToGoFunc GoTest_SendMessageToGo_;
 
 int GoTest_AppMain(int argc, const char** argv)
 {
     return NSApplicationMain(argc, argv);
+}
+
+void GoTest_SetSendMessageToGoFunc(GoTest_SendMessageToGoFunc func)
+{
+    GoTest_SendMessageToGo_ = func;
 }
 
 void GoTest_SendMessageToGo(char* message)
