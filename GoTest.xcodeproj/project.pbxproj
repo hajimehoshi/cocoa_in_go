@@ -177,7 +177,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "(cd src &&\n rm -f libGoTest.dylib &&\n ln -s ${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH} libGoTest.dylib &&\n /usr/local/go/bin/go build -o main &&\n rm -f libGoTest.dylib &&\n mv main ${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH})";
+			shellScript = "./post_build.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
