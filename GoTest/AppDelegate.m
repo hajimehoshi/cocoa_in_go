@@ -16,7 +16,13 @@
     // Insert code here to initialize your application
 }
 
-- (IBAction)pushButton:(id)sender {
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication
+{
+    return YES;
+}
+
+- (IBAction)pushButton:(id)sender
+{
     GoTest_SendMessageToGo("Hello, World!");
 }
 
