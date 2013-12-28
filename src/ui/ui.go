@@ -1,6 +1,6 @@
 package ui
 
-// #cgo LDFLAGS: -L.. -lGoTest
+// #cgo LDFLAGS: -L. -lGoTest
 //
 // #include <stdlib.h>
 // #include "../../GoTest/AppMain.h"
@@ -24,7 +24,7 @@ var sender = make(chan string)
 
 //export GoTest_ReceiveMessageFromUI
 func GoTest_ReceiveMessageFromUI(message C.cstring) {
-	receiver<- C.GoString(message)
+	receiver <- C.GoString(message)
 }
 
 func MessageReceiver() <-chan string {

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"./ui"
+	"fmt"
 )
 
 func main() {
@@ -11,7 +11,7 @@ func main() {
 		sender := ui.MessageSender()
 		for message := range receiver {
 			fmt.Printf("Message from UI: %s\n", message)
-			sender<- "OK, received: " + message
+			sender <- "OK, received: " + message
 		}
 	}()
 
