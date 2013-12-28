@@ -1,6 +1,6 @@
 package ui
 
-// #cgo LDFLAGS: -L. -lGoTest
+// #cgo LDFLAGS: -L. -L.. -lGoTest
 //
 // #include <stdlib.h>
 // #include "../../GoTest/AppMain.h"
